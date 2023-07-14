@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;   
+}
+body
+{   
+    background-image: url("avengers-background.jpg");
+    height:100vh; 
+    background-size:contain;
+    
+}
+.box-container{
+    display:flex;
+    float:right;
+    flex-wrap: wrap;
+    background-color:white;
+    width:600px;
+    height:550px;
+    margin:auto;
+    padding-left: 45px;
+    perspective: 1000px;
+    margin-right: 100px;
+    margin-top:50px;
+    
+    
+}
+.container{
+    
+}
+.heading{
+    text-align: center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;  
+    float:left;
+    margin-top: 300px;
+    font-size: 20px;
+    margin-left:50px;
+    background-color:black;
+}
+.card{
+    width:23%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ;
+    position:relative;
+}
+.front,.back{
+    height:100px;
+    width:100px;
+    background-color: rgb(255, 252, 252);
+    position:absolute;
+    border-radius: 10%;
+    margin:5px;
+    backface-visibility: hidden;   
+}
+.card.flip
+{ 
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.back{
+    transform: rotateY(180deg);
+}
+.card :active{
+ transform: scale(0.95);
+ transition: transform 0.2s ease-in-out;
+}
